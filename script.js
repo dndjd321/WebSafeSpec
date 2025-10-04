@@ -1,4 +1,4 @@
-// script.js 파일 - 최종 (2가지 다운로드 옵션 제공)
+// script.js 파일 - 최종 (2가지 다운로드 옵션 제공, 초기화 안내 문구 제거)
 
 // 1. JSON 데이터를 JavaScript 변수로 직접 정의
 const specs = [
@@ -276,11 +276,10 @@ function calculateSize() {
 function initializeApp() {
     populateSpecs();
     
-    // 초기화 텍스트
+    // ⚠️ 수정된 부분: 초기화 텍스트를 제거하고 outputResult 영역을 비워둡니다.
+    // index.html에 추가된 "사용 가이드 및 목적" 섹션이 그 역할을 대체합니다.
     if (outputResult) outputResult.innerHTML = `
-        <p class="description-text initial-guide">1. 플랫폼 규격을 선택하세요.</p>
-        <p class="description-text initial-guide">2. 이미지를 업로드하세요.</p>
-        <p class="description-text initial-guide">결과는 규격 선택 및 이미지 업로드 시 바로 표시됩니다.</p>
+        <p class="description-text initial-guide">결과를 확인하려면 플랫폼 규격을 선택하고 이미지를 업로드해 주세요.</p>
     `;
     
     if(targetSpecDiv) targetSpecDiv.innerHTML = '';
@@ -297,7 +296,7 @@ if (specSelect) specSelect.addEventListener('change', calculateSize);
 
 // ✨ 두 개의 다운로드 버튼 이벤트 연결
 if (downloadContainButton) downloadContainButton.addEventListener('click', resizeAndDownloadContain); 
-if (downloadStretchButton) downloadStretchButton.addEventListener('click', resizeAndDownloadStretch); 
+if (downloadStretchButton) downloadContainButton.addEventListener('click', resizeAndDownloadStretch); 
 
 // 앱 초기화 실행
 document.addEventListener('DOMContentLoaded', initializeApp);
