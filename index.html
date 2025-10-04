@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSafeSpec - 디자인 규격 변환기</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>📐 WebSafeSpec</h1>
+        <p>복잡한 플랫폼별 디자인 규격, 이제 픽셀 단위로 정확하게 변환하세요.</p>
+    </header>
+
+    <main>
+        <section class="select-section">
+            <h2>1. 플랫폼 규격을 선택하세요.</h2>
+            <select id="specSelect">
+                <option value="">-- 플랫폼 규격 선택 --</option>
+            </select>
+        </section>
+
+        <section class="input-section">
+            <h2>2. 원본 이미지 파일 업로드</h2>
+            <div class="input-group">
+                <label for="imageUpload" class="file-label">파일 선택:</label>
+                <input type="file" id="imageUpload" accept="image/*">
+                <span id="fileNameDisplay" class="file-name-display">선택된 파일 없음</span>
+            </div>
+
+            <div id="imagePreviewContainer" class="image-preview-container">
+                <img id="imagePreview" src="#" alt="업로드된 이미지 미리보기" class="image-preview-img">
+                <p id="noImageText" class="no-image-text">업로드된 이미지가 여기에 표시됩니다.</p>
+            </div>
+
+            <div id="imageInfo" class="input-group">
+                <p>업로드된 파일 규격: <span id="currentSize">--</span></p>
+            </div>
+        </section>
+
+        <section class="result-section">
+            <h2>3. 최적 변환 결과</h2>
+            <div id="outputResult">
+                <div id="targetSpec"></div>
+                <div id="calculatedSize"></div>
+            </div>
+            <button id="downloadContainButton" class="download-button" style="display: none; margin-top: 20px;">
+                    ⬇️ 최적 비율 조정 파일 다운로드 (내용 보존)
+                </button>
+                <button id="downloadStretchButton" class="download-button" style="display: none; margin-top: 10px;">
+                    ⬇️ 여백/크롭 없는 강제 채우기 다운로드 (비율 무시)
+                </button>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 WebSafeSpec.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

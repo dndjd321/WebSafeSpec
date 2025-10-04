@@ -1,0 +1,43 @@
+// specs.json 파일
+[
+    {
+        "id": "insta_square",
+        "name": "인스타그램 게시물 (정사각형 1:1)",
+        "platform": "Instagram",
+        "target_width": 1080,
+        "target_height": 1080,
+        "description": "가장 기본적인 1:1 비율입니다. 해상도는 1080x1080px 권장."
+    },
+    {
+        "id": "insta_portrait",
+        "name": "인스타그램 게시물 (세로 4:5)",
+        "platform": "Instagram",
+        "target_width": 1080,
+        "target_height": 1350,
+        "description": "피드에서 가장 큰 영역을 차지하는 세로형 비율입니다."
+    },
+    {
+        "id": "naver_smartstore_main",
+        "name": "스마트스토어 대표 이미지 (1:1)",
+        "platform": "Naver Smartstore",
+        "target_width": 1000,
+        "target_height": 1000,
+        "description": "검색 및 쇼핑 탭에 노출되는 기본 규격입니다. 최소 640px."
+    },
+    {
+        "id": "kakao_channel_logo",
+        "name": "카카오 채널 프로필/로고",
+        "platform": "KakaoTalk Channel",
+        "target_width": 400,
+        "target_height": 400,
+        "description": "최적의 프로필 이미지 크기입니다. 정사각형으로 제작해야 합니다."
+    },
+    {
+        "id": "youtube_thumbnail",
+        "name": "유튜브 썸네일 (16:9)",
+        "platform": "YouTube",
+        "target_width": 1280,
+        "target_height": 720,
+        "description": "유튜브 영상에 최적화된 표준 썸네일 규격입니다."
+    }
+]
